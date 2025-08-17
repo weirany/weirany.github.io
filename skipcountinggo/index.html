@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Skip Counting GO — Support</title>
+    <meta name="description" content="Support page for Skip Counting GO — learn skip counting with playful cards, spoken numbers, and a speedy test mode." />
+    <style>
+      :root {
+        --green: #5ECC4C;
+        --coral: #FF6F61;
+        --ink: #1f2937;
+        --paper: #ffffff;
+        --shadow: rgba(0,0,0,0.12);
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+        min-height: 100%;
+        color: var(--ink);
+        font-family: ui-rounded, system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+        line-height: 1.5;
+        background: #f6fff5;
+      }
+
+      /* Background image layer */
+      .bg {
+        position: fixed;
+        inset: 0;
+        background-image: url('./bg.png');
+        background-size: cover;
+        background-position: center;
+        filter: saturate(1.05) brightness(1.02);
+        z-index: -2;
+      }
+      /* Soft color overlay to keep text readable */
+      .overlay {
+        position: fixed;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(255,255,255,0.86), rgba(255,255,255,0.92));
+        z-index: -1;
+      }
+
+      .wrap {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 24px 16px 56px;
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin: 8px 0 16px;
+      }
+      header img.logo {
+        width: 72px; height: 72px;
+        border-radius: 16px;
+        box-shadow: 0 6px 18px var(--shadow);
+      }
+      header .title {
+        display: flex; flex-direction: column; gap: 4px;
+      }
+      h1 {
+        margin: 0;
+        font-size: 28px;
+        font-weight: 800;
+        letter-spacing: 0.2px;
+      }
+      .subtitle {
+        color: #374151;
+        font-weight: 600;
+      }
+
+      .card {
+        background: var(--paper);
+        border-radius: 16px;
+        box-shadow: 0 10px 30px var(--shadow);
+        padding: 20px;
+        margin: 16px 0;
+      }
+      .card h2 {
+        margin: 0 0 10px;
+        font-size: 20px;
+      }
+      .pill {
+        display: inline-block;
+        background: var(--green);
+        color: #fff;
+        border-radius: 999px;
+        padding: 6px 12px;
+        font-weight: 700;
+        box-shadow: 0 6px 18px rgba(94,204,76,0.35);
+      }
+      .cta {
+        display: inline-flex; align-items: center; gap: 10px;
+        background: var(--coral);
+        color: #fff; text-decoration: none;
+        border-radius: 12px; padding: 10px 14px;
+        font-weight: 800;
+        box-shadow: 0 10px 24px rgba(255,111,97,0.35);
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 12px;
+      }
+      ul { padding-left: 18px; }
+
+      footer {
+        margin-top: 28px;
+        color: #4b5563;
+        font-size: 14px;
+      }
+
+      /* Playful emoji bullets */
+      .emoji { font-size: 18px; margin-right: 6px; }
+
+      @media (prefers-color-scheme: dark) {
+        :root { --ink: #f3f4f6; --paper: #111827; --shadow: rgba(0,0,0,0.5); }
+        .overlay { background: linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.55)); }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg"></div>
+    <div class="overlay"></div>
+    <main class="wrap">
+      <header>
+        <img src="./app-icon.png" class="logo" alt="Skip Counting GO app icon" />
+        <div class="title">
+          <h1>Skip Counting GO — Support</h1>
+          <div class="subtitle">Learn multiples with fun, spoken cards</div>
+        </div>
+      </header>
+
+      <div class="card" role="region" aria-labelledby="about">
+        <h2 id="about">About the App</h2>
+        <p>
+          Skip Counting GO helps kids master skip counting (the foundation of multiplication) with a playful, tap‑to‑reveal card game. Choose a number (2–10), uncover each multiple in order, and hear every answer spoken out loud.
+        </p>
+        <div class="grid">
+          <div>
+            <span class="emoji">🎯</span><strong>Three modes</strong>: Learn, Practice, and Test.
+          </div>
+          <div>
+            <span class="emoji">🔈</span><strong>Spoken numbers</strong>: clear audio feedback for each tap.
+          </div>
+          <div>
+            <span class="emoji">⏱️</span><strong>Timer</strong>: see your final time in Test mode.
+          </div>
+          <div>
+            <span class="emoji">🔒</span><strong>One‑time purchase</strong>: unlock 6, 7, 8, and 9 (no subscription).
+          </div>
+          <div>
+            <span class="emoji">🧸</span><strong>Kid‑friendly</strong>: big buttons, readable fonts, gentle haptics.
+          </div>
+          <div>
+            <span class="emoji">📴</span><strong>Offline</strong>: works without internet or accounts.
+          </div>
+        </div>
+      </div>
+
+      <div class="card" role="region" aria-labelledby="how">
+        <h2 id="how">How to Play</h2>
+        <ol>
+          <li>Tap the green circle at the top to pick a number (2–10).</li>
+          <li>Select a mode in the center: <em>Learn</em>, <em>Practice</em>, or <em>Test</em>.</li>
+          <li>Tap cards in order. Correct taps flip the card and the number is spoken.</li>
+          <li>In Test mode, finish the sequence to see your time.</li>
+        </ol>
+        <p class="pill" aria-label="Tip">Tip: Use the purple reset button to start over</p>
+      </div>
+
+      <div class="card" role="region" aria-labelledby="faq">
+        <h2 id="faq">FAQ</h2>
+        <p><strong>Which numbers are free?</strong><br/> 2, 3, 4, 5, and 10 are free. A one‑time purchase unlocks 6, 7, 8, and 9.</p>
+        <p><strong>How do I restore purchases?</strong><br/> On the number picker, tap a locked number (6–9), then choose <em>Restore Purchases</em>.</p>
+        <p><strong>I can’t hear sound — what should I do?</strong><br/> Ensure the device volume is up and not routed to headphones. The app plays spoken numbers even if the silent switch is on.</p>
+        <p><strong>Does the app track data?</strong><br/> No. There are no ads, accounts, or tracking. It works offline.</p>
+        <p><strong>Which devices are supported?</strong><br/> iPhone and iPad running recent iOS/iPadOS versions. The layout adapts to portrait or landscape.</p>
+      </div>
+
+      <div class="card" role="region" aria-labelledby="contact">
+        <h2 id="contact">Contact Support</h2>
+        <p>If you need help or want to share feedback, we’re happy to hear from you.</p>
+        <p>
+          <a class="cta" href="mailto:skipcountinggo@talkan.com?subject=Skip%20Counting%20GO%20Support">
+            ✉️ Email support — skipcountinggo@talkan.com
+          </a>
+        </p>
+        <p>When writing in, sharing your device model, iOS version, and a short description of the issue helps us help you faster.</p>
+      </div>
+
+      <footer>
+        <p>
+          © <span id="year"></span> Skip Counting GO. No ads. No tracking. One‑time purchase for full access.
+        </p>
+      </footer>
+    </main>
+
+    <script>
+      // Keep the year current without any network calls
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+  </html>
+
