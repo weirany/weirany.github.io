@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Skip Counting GO — Privacy Policy</title>
+    <meta name="description" content="Privacy Policy for Skip Counting GO. We do not collect personal data, track users, or show ads." />
+    <style>
+      :root {
+        --green: #5ECC4C;
+        --coral: #FF6F61;
+        --ink: #1f2937;
+        --paper: #ffffff;
+        --shadow: rgba(0,0,0,0.12);
+      }
+      html, body { margin: 0; padding: 0; min-height: 100%; color: var(--ink); font-family: ui-rounded, system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; line-height: 1.6; background: #f6fff5; }
+      .bg { position: fixed; inset: 0; background-image: url('./bg.png'); background-size: cover; background-position: center; filter: saturate(1.05) brightness(1.02); z-index: -2; }
+      .overlay { position: fixed; inset: 0; background: linear-gradient(180deg, rgba(255,255,255,0.86), rgba(255,255,255,0.92)); z-index: -1; }
+      .wrap { max-width: 980px; margin: 0 auto; padding: 24px 16px 56px; }
+      header { display: flex; align-items: center; gap: 16px; margin: 8px 0 16px; }
+      header img.logo { width: 64px; height: 64px; border-radius: 14px; box-shadow: 0 6px 18px var(--shadow); }
+      h1 { margin: 0; font-size: 28px; font-weight: 800; letter-spacing: 0.2px; }
+      .card { background: var(--paper); border-radius: 16px; box-shadow: 0 10px 30px var(--shadow); padding: 22px; margin: 16px 0; }
+      .card h2 { margin: 0 0 10px; font-size: 20px; }
+      a { color: #0f766e; text-underline-offset: 3px; }
+      .notice { display: inline-block; background: var(--green); color: #fff; border-radius: 999px; padding: 6px 12px; font-weight: 800; box-shadow: 0 6px 18px rgba(94,204,76,0.35); }
+      .toplinks { margin-top: 6px; }
+      .toplinks a { margin-right: 14px; font-weight: 700; }
+      footer { margin-top: 28px; color: #4b5563; font-size: 14px; }
+      @media (prefers-color-scheme: dark) { :root { --ink: #f3f4f6; --paper: #111827; --shadow: rgba(0,0,0,0.5); } .overlay { background: linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.55)); } }
+    </style>
+  </head>
+  <body>
+    <div class="bg"></div>
+    <div class="overlay"></div>
+    <main class="wrap">
+      <header>
+        <img src="./app-icon.png" class="logo" alt="Skip Counting GO app icon" />
+        <div>
+          <h1>Privacy Policy — Skip Counting GO</h1>
+          <div class="toplinks">
+            <a href="./index.html">← Back to Support</a>
+          </div>
+        </div>
+      </header>
+
+      <div class="card" role="region" aria-labelledby="summary">
+        <h2 id="summary">Summary</h2>
+        <p class="notice" aria-label="We respect your privacy">We do not collect personal data. We do not track you. We do not show ads.</p>
+        <p>Skip Counting GO is designed for children and families. The app works fully offline and processes activity on your device.</p>
+      </div>
+
+      <div class="card" role="region" aria-labelledby="collect">
+        <h2 id="collect">Data We Collect</h2>
+        <ul>
+          <li>No personal information is collected, stored, sold, or shared by the app.</li>
+          <li>No analytics SDKs, advertising SDKs, or third‑party trackers are used.</li>
+          <li>Basic app preferences (like your selected number and mode) are saved locally on your device using system storage.</li>
+        </ul>
+      </div>
+
+      <div class="card" role="region" aria-labelledby="device">
+        <h2 id="device">On‑Device Processing</h2>
+        <p>The app uses on‑device speech synthesis to speak numbers aloud. Audio is generated on your device and is not transmitted to any server.</p>
+        <p>If future features request Microphone or Speech Recognition access, audio would only be used to enable interactive practice and would remain on‑device. We do not store or transmit audio recordings.</p>
+      </div>
+
+      <div class="card" role="region" aria-labelledby="iap">
+        <h2 id="iap">Purchases</h2>
+        <p>Skip Counting GO offers an optional one‑time in‑app purchase to unlock additional content (6–9). Purchases are processed by Apple via the App Store using StoreKit. We do not have access to your payment information.</p>
+        <p>You can restore purchases at any time using the <em>Restore Purchases</em> option in the app.</p>
+      </div>
+
+      <div class="card" role="region" aria-labelledby="children">
+        <h2 id="children">Children’s Privacy</h2>
+        <p>The app is suitable for children and is built to minimize data collection. Because we do not collect personal data, there is nothing to share or sell. If you contact us for support, we will only use your email to reply and resolve your request.</p>
+      </div>
+
+      <div class="card" role="region" aria-labelledby="contact">
+        <h2 id="contact">Contact Us</h2>
+        <p>If you have questions about this policy or your data, please contact us:</p>
+        <p><a href="mailto:skipcountinggo@talkan.com?subject=Privacy%20Inquiry%20—%20Skip%20Counting%20GO">skipcountinggo@talkan.com</a></p>
+      </div>
+
+      <div class="card" role="region" aria-labelledby="changes">
+        <h2 id="changes">Changes to This Policy</h2>
+        <p>We may update this policy to reflect product or legal changes. We will update the date below when changes are made.</p>
+        <p><strong>Effective date:</strong> <span id="date"></span></p>
+      </div>
+
+      <footer>
+        <p>© <span id="year"></span> Skip Counting GO.</p>
+      </footer>
+    </main>
+
+    <script>
+      const now = new Date();
+      document.getElementById('year').textContent = now.getFullYear();
+      document.getElementById('date').textContent = now.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' });
+    </script>
+  </body>
+  </html>
+
